@@ -34,13 +34,16 @@ namespace ProductReviewManagementWithLinq
 
             //UC2
             Management management = new Management();
-            //  management.TopRecords(productReviewList);
+            management.TopRecords(productReviewList);
 
             //UC3
             management.SelectedRecords(productReviewList);
 
             //UC4
             management.RetrieveCountOfRecords(productReviewList);
+
+            //UC5
+            management.RetrieveProductIDAndReviews(productReviewList);
             Console.ReadKey();
         }
 
