@@ -43,15 +43,16 @@ namespace ProductReviewManagementWithLinq
             //management.RetrieveCountOfRecords(productReviewList);
 
             //UC5
-             //management.RetrieveProductIDAndReviews(productReviewList);
+            //management.RetrieveProductIDAndReviews(productReviewList);
 
             //UC6
             //management.SkipTopFiveRecords(productReviewList);
 
             //UC7
-           // management.SelectProductIDAndReviews(productReviewList);
+            // management.SelectProductIDAndReviews(productReviewList);
 
-            
+            //UC9
+            management.RetrieveTrueIsLike();
             Console.ReadKey();
         }
 
