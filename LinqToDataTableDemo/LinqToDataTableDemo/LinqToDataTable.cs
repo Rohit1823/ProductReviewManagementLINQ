@@ -29,7 +29,4 @@ namespace LinqToDataTableDemo
             }
         }
     }
-
-
-
 }
