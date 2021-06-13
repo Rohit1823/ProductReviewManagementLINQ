@@ -52,7 +52,11 @@ namespace ProductReviewManagementWithLinq
             // management.SelectProductIDAndReviews(productReviewList);
 
             //UC9
-            management.RetrieveTrueIsLike();
+            //management.RetrieveTrueIsLike();
+
+            //UC10
+            management.AverageRatingByProductID();
+
             Console.ReadKey();
         }
 

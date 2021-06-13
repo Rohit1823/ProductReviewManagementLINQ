@@ -124,5 +124,20 @@ namespace ProductReviewManagementWithLinq
                 Console.WriteLine($"ProductID- {dataItem.ItemArray[0]} UserID- {dataItem.ItemArray[1]} Rating- {dataItem.ItemArray[2]} Review- {dataItem.ItemArray[3]} isLike- {dataItem.ItemArray[4]}");
             }
         }
+        public void AverageRatingByProductID()
+        {
+            var Data = dataTable.AsEnumerable()
+                       .GroupBy(product => product.Field<int>("ProductID"))
+                       .Select(product => new
+                       {
+                           ProductID = product.Key,
+                           Ratings = product.Average(product => product.Field<int>("Rating"))
+                       });
+
+            foreach (var dataItem in Data)
+            {
+                Console.WriteLine("Product Id: " + dataItem.ProductID + " " + "Average: " + dataItem.Ratings);
+            }
+        }
     }
 }
