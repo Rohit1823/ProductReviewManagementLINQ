@@ -55,8 +55,10 @@ namespace ProductReviewManagementWithLinq
             //management.RetrieveTrueIsLike();
 
             //UC10
-            management.AverageRatingByProductID();
+            //management.AverageRatingByProductID();
 
+            //UC11
+            management.RetrieveFieldOfReview();
             Console.ReadKey();
         }
 

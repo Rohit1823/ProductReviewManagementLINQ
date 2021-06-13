@@ -139,5 +139,19 @@ namespace ProductReviewManagementWithLinq
                 Console.WriteLine("Product Id: " + dataItem.ProductID + " " + "Average: " + dataItem.Ratings);
             }
         }
+        public void RetrieveFieldOfReview()
+        {
+            var recordData = from products in dataTable.AsEnumerable()
+                             where (products.Field<string>("Review") == "nice")
+                             select products;
+            foreach (var products in recordData)
+            {
+                Console.WriteLine("ProductId : " + products.Field<int>("ProductId")
+                                    + " UserId : " + products.Field<int>("userId")
+                                    + " Rating : " + products.Field<int>("Rating")
+                                    + "  Review : " + products.Field<string>("Review")
+                                    + "  IsLike : " + products.Field<bool>("isLike"));
+            }
+        }
     }
 }
