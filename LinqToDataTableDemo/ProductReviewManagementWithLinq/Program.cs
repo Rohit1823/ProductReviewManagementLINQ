@@ -58,7 +58,10 @@ namespace ProductReviewManagementWithLinq
             //management.AverageRatingByProductID();
 
             //UC11
-            management.RetrieveFieldOfReview();
+            //management.RetrieveFieldOfReview();
+
+            //UC12
+            management.RetrieveRecordsHavingSameUserIdwithRatings();
             Console.ReadKey();
         }
 

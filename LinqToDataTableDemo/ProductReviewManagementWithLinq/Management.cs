@@ -153,5 +153,21 @@ namespace ProductReviewManagementWithLinq
                                     + "  IsLike : " + products.Field<bool>("isLike"));
             }
         }
+        public void RetrieveRecordsHavingSameUserIdwithRatings()
+        {
+            var recordedData = dataTable.AsEnumerable()
+                .OrderBy(products => products.Field<int>("Rating"))
+                .Where(products => products.Field<int>("userId") == 10)
+                .Select(products => new
+                {
+                    SameUserId = products.Field<int>("userId"),
+                    Rating = products.Field<int>("Rating")
+                });
+
+            foreach (var products in recordedData)
+            {
+                Console.WriteLine("SameUserId : " + products.SameUserId + " " + " Ratings : " + products.Rating);
+            }
+        }
     }
 }
